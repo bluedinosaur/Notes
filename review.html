@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Review</title>
+    <link rel="stylesheet" type="text/css" href="review.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <button onclick="bottomFunction()" id="myBtn" title="Go to bottom">
+      To Bottom
+    </button>
+    <button onclick="topFunction()" id="myBtnTop" title="Go to top">
+      To Top
+    </button>
+    <h1>HTML</h1>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>HTML Tag</th>
+        <th class="example">Example</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Paragraph Tag</td>
+        <td>&lt; p &gt;</td>
+        <td>
+          &lt;p&gt;My first paragraph&lt;/p&gt; <br />
+          <br />
+          <p>My first paragraph</p>
+        </td>
+        <td>
+          Defines a paragraph. Browsers automatically add a single blank line
+          before and after each element.
+        </td>
+      </tr>
+      <tr>
+        <td>Anchor Tag</td>
+        <td>&lt; a &gt;</td>
+        <td>
+          Link to &lt;a href="google.com"&gt;Google&lt;/a&gt; <br />
+          <br />
+          Link to <a href="google.com">Google</a>
+        </td>
+        <td>
+          Defines a hyperlink, the href attribute specifies the URL of the page
+          the link goes to
+        </td>
+      </tr>
+      <tr>
+        <td>Heading Tag</td>
+        <td>&lt; h1 &gt;</td>
+        <td>
+          &lt;h1&gt;Heading 1&lt;/h1&gt; <br />
+          <h1>Heading 1</h1>
+          <br />
+          &lt;h2&gt;Heading 2&lt;/h2&gt; <br />
+          <h2>Heading 2</h2>
+          <br />
+          &lt;h3&gt;Heading 3&lt;/h3&gt; <br />
+          <h3>Heading 3</h3>
+          <br />
+        </td>
+        <td>
+          Titles or subtitles that you want to display on a webpage. h1 to h6
+        </td>
+      </tr>
+      <tr>
+        <td>Image Tag</td>
+        <td>&lt; img &gt;</td>
+        <td>
+          &lt;img
+          src="https://geniusvets.s3.amazonaws.com/gv-cat-breeds/Exotic-Shorthair-1.jpg"
+          alt="Exotic Shorthair" width="100" height="100"&gt; <br />
+          <br />
+          <img
+            src="https://geniusvets.s3.amazonaws.com/gv-cat-breeds/Exotic-Shorthair-1.jpg"
+            alt="Exotic Shorthair"
+            width="100"
+            height="100"
+          />
+        </td>
+        <td>
+          Used to embed an image in an HTML page. Images are not technically
+          inserted into a web page; images are linked to web pages. The img tag
+          creates a holding space for the referenced image. <br />
+          Two required attributes, src and alt
+        </td>
+      </tr>
+      <tr>
+        <td>Form and Input Tag</td>
+        <td>&lt; Form &gt;</td>
+        <td>
+          &lt; form action="/action_page.php" method="get"&gt; <br />
+          &lt;label for="fname">First name:&lt;/label&gt;&lt;br /&gt; <br />
+          &lt;input type="text" id="lname" name="lname" /&gt; &lt;br /&gt;
+          <br />
+          &lt;input type="submit" value="Submit" /&gt; <br />
+          &lt;/form&gt; <br />
+          <br />
+          <code>
+            <form action="/action_page.php" method="get">
+              <label for="fname">First name:</label><br />
+              <input type="text" id="lname" name="lname" /><br />
+              <input type="submit" value="Submit" />
+            </form>
+          </code>
+          <br />
+        </td>
+        <td>
+          Form tag is used to create an HTML form for user input. Can contain
+          following elements:
+          <ul>
+            <li>input</li>
+            <li>textarea</li>
+            <li>button</li>
+            <li>select</li>
+            <li>option</li>
+            <li>optgroup</li>
+            <li>fieldset</li>
+            <li>label</li>
+            <li>output</li>
+          </ul>
+          <br />
+        </td>
+      </tr>
+      <tr>
+        <td>Input Tag</td>
+        <td>&lt; input &gt;</td>
+        <td>
+          &lt;input &gt; <br />
+          <br />
+        </td>
+        <td>
+          <br />
+        </td>
+      </tr>
+    </table>
+    <h1>ES5 and ES6</h1>
+    <h1>EcmaScript5 & 6</h1>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>HTML Tag</th>
+        <th class="example">Example</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Ternery operator</td>
+        <td>condition ? exprIfTrue : exprIfFalse;</td>
+        <td>
+          <code>
+            var age = 26; <br />
+            var beverage = (age >= 21) ? "Beer" : "Juice"; <br />
+            console.log(beverage); <br />
+            // "Beer"
+          </code>
+        </td>
+        <td>Can be used instead of an if/else statement</td>
+      </tr>
+      <tr>
+        <td>Switch Statement</td>
+        <td>
+          <code>
+            switch (expression) { <br />
+            case value1: //Statements executed when the result of expression
+            matches value1// <br />
+            break; <br />
+            case value2:<br />
+            //Statements executed when the result of expression matches
+            value2//<br />
+            [break;] <br />
+            [default: <br />
+            //Statements executed when none of the values match the value of the
+            expression// <br />
+            [break;]] }<br />
+          </code>
+        </td>
+        <td>
+          <code>
+            var age = 26; <br />
+            var beverage = (age >= 21) ? "Beer" : "Juice"; <br />
+            console.log(beverage); <br />
+            // "Beer"<br />
+          </code>
+        </td>
+        <td>Can be used instead of an if/else statement</td>
+      </tr>
+      <tr>
+        <td>Let variable</td>
+        <td>let</td>
+        <td>
+          <code>
+            let example = false;<br />
+            let age = 100;<br />
+            if(age = 90) {<br />
+            let example = true<br />
+            console.log("inside scope", example)<br />
+            }<br />
+            console.log("outside scope", example)<br />
+            <br />
+            //inside scope true<br />
+            //outside scope false<br />
+          </code>
+        </td>
+        <td>
+          LET variable allows scope to stay within function. When it is created
+          inside a function, it creates a new scope, where var scope is both
+          inside and outside.
+        </td>
+      </tr>
+      <tr>
+        <td>Const variable</td>
+        <td>const</td>
+        <td>
+          <code>
+            const obj = {<br />
+            player: "bobby",<br />
+            age: 10,<br />
+            gender: true<br />
+            }<br />
+          </code>
+        </td>
+        <td>
+          CONST variable will always have the same value. With const you can
+          change the properties but you cannot reassign the variable name OBJ
+        </td>
+      </tr>
+      <tr>
+        <td>Destructuring</td>
+        <td></td>
+        <td>
+          <code>
+            const obj = {<br />
+            player: "bobby",<br />
+            age: 10,<br />
+            gender: true<br />
+            }<br />
+            <br />
+            const/let { player, age, gender} = obj;<br />
+
+            //now player, age and gender become available as variables let or
+            const
+            <br />
+            player = "bobby"<br />
+          </code>
+        </td>
+        <td>
+          <p>
+            Destructuring makes it possible to unpack values from arrays,
+            properties from objects into distict variables
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>Dynamic object properties</td>
+        <td></td>
+        <td>
+          <code>
+            const obj = {<br />
+            [player]: "bobby",<br />
+            [age]: 10,<br />
+            [1 + 2]: number<br />
+            }<br />
+            //assign new property titles<br />
+            const player = "title";<br />
+            const age = "age2";<br />
+            //This results in...<br />
+            const obj = {<br />
+            [title]: "bobby",<br />
+            [age2]: 10,<br />
+            [3]: number<br />
+            }<br />
+          </code>
+        </td>
+        <td>
+          <p>
+            Using square brackets, we are able to dynamically change object
+            properties
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>Template Strings/literals</td>
+        <td><code>`string text ${expression} string text`</code></td>
+        <td>
+          <code>
+            let a = 5;<br />
+            let b = 10;<br />
+            console.log('Fifteen is ' + (a + b) + ' and\nnot ' + (2 * a + b) +
+            '.');<br />
+          </code>
+        </td>
+        <td>
+          <p>
+            Template stings or template literals are, Using backticks, we can
+            use embedded expressions into strings.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>Default arguements</td>
+        <td></td>
+        <td>
+          <code>
+            function greet (name="John", age=30){ return `Hello ${name} you are
+            ${age}` };<br />
+
+            greet();<br />
+            //"Hello John you are 30";<br />
+          </code>
+        </td>
+        <td>
+          <p>
+            Default values can be established, and when nothing is passed into
+            the function, the default values will be produced. This is used with
+            template literals.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>Symbol</td>
+        <td><code> Symbol()</code></td>
+        <td>
+          <code>
+            let sym1 = Symbol();<br />
+            let sym2 = Symbol("john");<br />
+            let sym3 = Symbol("john");<br />
+            sym2 === sym3 //FALSE<br />
+          </code>
+        </td>
+        <td>
+          <p>
+            Symbol used as an identifier which doesnt let the objects with the
+            same properties collide
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table>
+      <h1>Advanced Functions</h1>
+      <tr>
+        <th>Name</th>
+        <th>HTML Tag</th>
+        <th class="example">Example</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Arrow functions</td>
+        <td>
+          <code>
+            const add = (a, b) => { a + b }
+          </code>
+        </td>
+        <td>
+          <code>
+            function add(a, b){return a + b }<br />
+            //becomes...<br />
+            const add = (a, b) => { a + b }<br />
+          </code>
+        </td>
+        <td>
+          <p>
+            Alternative to regular function expressions
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>Closures</td>
+        <td></td>
+        <td>
+          <code>
+            const first = () => {<br />
+            const greet = "Hi";<br />
+            const second = () => {<br />
+            const name = "Bobby"<br />
+            alert(greet);<br />
+            }<br />
+            return second<br />
+            }<br />
+            const newFunc = first();<br />
+            newFunc();<br />
+            //alert "Hi"<br />
+          </code>
+        </td>
+        <td>
+          <p>
+            A function ran, the function executed, its never going to run again
+            BUT its going to remember that there are references to those
+            variables. SO THE CHILD SCOPE ALWAYS HAS ACCESS TO THE PARENT SCOPE.
+            Children always has access to the parent scope, but parents do not
+            have access to the children scope.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>Currying</td>
+        <td>
+          <code>
+            const multiply = (a,b) => a * b; const curriedMultiply = (a) => (b)
+            => a * b;<br />
+          </code>
+        </td>
+        <td>
+          <code>
+            const multiply = (a,b) => a * b;<br />
+            const curriedMultiply = (a) => (b) => a * b;<br />
+            curriedMultiply(3)(4)<br />
+            //12<br />
+            const multiplyBy5 = curriedMultiply(5);<br />
+            multiplyBy5(10);<br />
+            //50<br />
+          </code>
+        </td>
+        <td>
+          <p>
+            Currying is when you break down a function that takes multiple
+            arguments into a series of functions that each take only one
+            argument
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>Compose</td>
+        <td></td>
+        <td>
+          <code>
+            const compose (f, g) => (a) => f(g(a));<br />
+            const sum = (num) => num + 1<br />
+            compose(sum, sum)(5)<br />
+            //Breakdown//<br />
+            //this translates to...<br />
+            compose (sum, sum) => (5) => sum(sum(5));<br />
+            //first...<br />
+            compose (f, g) => (a) => f(sum(5));<br />
+            //which results in...<<br />
+            compose (f, g) => (a) => f(6);<br />
+            //which then...<br />
+            compose (f, g) => (a) => sum(6);<br />
+            //which results in...<br />
+            compose (f, g) => (a) => 7;<br />
+            //returns 7<br />
+          </code>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Avoid side effects, functional purtity</td>
+        <td></td>
+        <td></td>
+        <td>
+          two elements of a pure function? 1. Deterministic --> always produces
+          the same results given the same inputs 2. No Side Effects --> It does
+          not depend on any state, or data, change during a program’s execution.
+          It must only depend on its input elements.
+        </td>
+      </tr>
+      <tr>
+        <td>Avoid side effects, functional purtity</td>
+        <td></td>
+        <td></td>
+        <td>
+          two elements of a pure function? 1. Deterministic --> always produces
+          the same results given the same inputs 2. No Side Effects --> It does
+          not depend on any state, or data, change during a program’s execution.
+          It must only depend on its input elements.
+        </td>
+      </tr>
+    </table>
+    <h1>Advanced Arrays</h1>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>HTML Tag</th>
+        <th class="example">Example</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Map</td>
+        <td></td>
+        <td>
+          <code>
+            const array = [1, 2, 4, 10];<br />
+            const mapArray = array.map(num => num * 2);<br />
+            console.log("map", mapArray);<br />
+            //map [2, 4, 8, 20]<br />
+          </code>
+        </td>
+        <td>
+          Can be used instead of an forEach. This is beneficial over forEach
+          because there are no side effects, that is there are defined inputs
+          and a defined output. You must return something
+        </td>
+      </tr>
+      <tr>
+        <td>Filter</td>
+        <td></td>
+        <td>
+          <code>
+            const array = [1, 2, 4, 10];<br />
+            const filterArray = array.filter(num => num < 5);<br />
+            console.log("filter", filterArray);<br />
+            //filter [1, 2, 4]
+          </code>
+        </td>
+        <td>
+          Filters out items in the array according to the function expression
+        </td>
+      </tr>
+      <tr>
+        <td>Reduce</td>
+        <td></td>
+        <td>
+          <code>
+            const array = [1, 2, 4, 10];<br />
+            const reduceArray = array.reduce((accumulator, num) => { return
+            accumulator + num}, 0);<br />
+            console.log("reduce", reduceArray);<br />
+            //17
+          </code>
+        </td>
+        <td>
+          the 0 is the starting number for the accuumulator. The accumulator
+          remembers the previous looped value, and adds the number in this
+          function.
+        </td>
+      </tr>
+    </table>
+    <h1>Advanced Objects</h1>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>HTML Tag</th>
+        <th class="example">Example</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Reference Type</td>
+        <td></td>
+        <td>
+          <code>
+            var object1 = {value: 10}; <br />
+            var object2 = object1; <br />
+            var object3 = {value: 10};<br />
+            <br />
+            object1 === object2; //true <br />
+            object1 === object3; //false <br />
+            object2 === object3; //false <br />
+          </code>
+        </td>
+        <td>
+          Although object1 and object3 has the same value, they are referring to
+          different objects thus false. However, object1 and object3 has the
+          same value (object1.value === object3.value; //true)
+        </td>
+      </tr>
+      <tr>
+        <td>Reference Type</td>
+        <td></td>
+        <td>
+          <code>
+            const object4 = { a: function(){ console.log(this) } }<br />
+            //{a: function} <br />
+            const object5 = { function(){console.log(this)} }<br />
+            //{function} <br />
+            console.log(this); //window
+          </code>
+        </td>
+        <td>
+          Similar but different from scope, context refers to 'this' and in what
+          context it exists
+        </td>
+      </tr>
+      <tr>
+        <td>Instantiation(constructor)</td>
+        <td></td>
+        <td>
+          <code>
+            class Player { <br />
+            constructor(name, type){ <br />
+            this.name = name; <br />
+            this.type= type; <br />
+            } <br />
+            introduce(){ <br />
+            console.log(`Hi I am ${this.name}, I'm a ${this.type}`) <br />
+            } }<br />
+            <br />
+            const player1 = new Player("Jack", "fighter"); <br />
+            <br />
+            //player1 <br />
+            //Player {name: "Jack", type: "fighter"} <br />
+            //player1.introduce()<br />
+            //Hi I am Jack, I'm a fighter<br />
+            <br />
+            class Wizard extends Player {<br />
+            constructor(name, type, skill){<br />
+            super(name, type);<br />
+            this.skill = skill; <br />
+            } <br />
+            play(){ console.log(`I am a ${this.type}`)<br />
+            }}<br />
+            <br />
+            const wizard1 = new Wizard("Jill", "Healer", "Revive"); <br />
+            <br />
+            //wizard1<br />
+            //Wizard {name: "Jill", type: "Healer", skill: "Revive"} <br />
+            //wizard1.play() <br />
+            //I am a Healer <br />
+          </code>
+        </td>
+        <td>
+          Creates a constructor to create objects. Extends can extend the
+          constuctor by adding new key value pairs, or functions etc.
+        </td>
+      </tr>
+    </table>
+    <h1>Pass by REFERENCE VS Pass by VALUE</h1>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>HTML Tag</th>
+        <th class="example">Example</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Pass by VALUE</td>
+        <td></td>
+        <td>
+          <code>
+            var a = 5; <br />
+            var b = a;<br />
+            b++<br />
+            console.log(a)<br />
+            console.log(b)<br />
+            //5<br />
+            //6<br />
+          </code>
+        </td>
+        <td>
+          The value from variable a was copied to variable b, then added onto.
+          The value was copied into a new "memory space".
+        </td>
+      </tr>
+      <tr>
+        <td>Pass by REFERENCE(object & array)</td>
+        <td></td>
+        <td>
+          <code>
+            //EXAMPLE1 - Array//<br />
+            var c = [1,2,3,4,5]; var d = c;<br />
+            d.push(6789);<br />
+            console.log(c)<br />
+            console.log(d)<br />
+            <br />
+            //EXAMPLE2 - Object//<br />
+            let obj1 = {name: "Yao", password: "123"};<br />
+            let obj2 = obj1;<br />
+            obj2.password = "abc"<br />
+            console.log(obj1)<br />
+            console.log(obj2)<br />
+            //obj1 {name: "Yao", password: "abc"}<br />
+            //obj2 {name: "Yao", password: "abc"}<br />
+          </code>
+        </td>
+        <td>
+          Example 1 - The number was pushed to the array, which is assigned to
+          variable c and d.<br />
+          <br />
+          Example 2 - Both passwords were updated because of pass by REFERENCE.
+          Object was not copied, it was simply assigned to two variables.
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
