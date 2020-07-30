@@ -2,20 +2,70 @@
 mybutton1 = document.getElementById("myBtn");
 mybutton2 = document.getElementById("myBtnTop");
 
-// When the user scrolls down 20px from the top of the document, show the button
-// window.onscroll = function () {
-//   scrollFunction();
-// };
-
-// function scrollFunction() {
-//   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-//     mybutton1.style.display = "block";
-//     mybutton2.style.display = "block";
-//   } else {
-//     mybutton1.style.display = "none";
-//     mybutton2.style.display = "none";
-//   }
-// }
+$(".html-link").click(function () {
+  $("html,body").animate(
+    {
+      scrollTop: $(".html-topic").offset().top - 25,
+    },
+    "slow"
+  );
+});
+$(".es5-link").click(function () {
+  $("html,body").animate(
+    {
+      scrollTop: $(".es5-topic").offset().top - 25,
+    },
+    "slow"
+  );
+});
+$(".Afunctions-link").click(function () {
+  $("html,body").animate(
+    {
+      scrollTop: $(".Afunctions-topic").offset().top - 25,
+    },
+    "slow"
+  );
+});
+$(".Aarrays-link").click(function () {
+  $("html,body").animate(
+    {
+      scrollTop: $(".Aarrays-topic").offset().top - 25,
+    },
+    "slow"
+  );
+});
+$(".Aobjects-link").click(function () {
+  $("html,body").animate(
+    {
+      scrollTop: $(".Aobjects-topic").offset().top - 25,
+    },
+    "slow"
+  );
+});
+$(".PrefPval-link").click(function () {
+  $("html,body").animate(
+    {
+      scrollTop: $(".PrefPval-topic").offset().top - 25,
+    },
+    "slow"
+  );
+});
+$(".TypeC-link").click(function () {
+  $("html,body").animate(
+    {
+      scrollTop: $(".TypeC-topic").offset().top - 25,
+    },
+    "slow"
+  );
+});
+$(".es7-link").click(function () {
+  $("html,body").animate(
+    {
+      scrollTop: $(".es7-topic").offset().top - 25,
+    },
+    "slow"
+  );
+});
 
 // When the user clicks on the button, scroll to the top of the document
 function bottomFunction() {

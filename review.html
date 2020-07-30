@@ -9,29 +9,117 @@
       href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <button onclick="bottomFunction()" id="myBtn" title="Go to bottom">
-      To Bottom
-    </button>
-    <button onclick="topFunction()" id="myBtnTop" title="Go to top">
-      To Top
-    </button>
-    <h1>HTML</h1>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li> -->
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Topics
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <button class="dropdown-item html-link">HTML</button>
+              <button class="dropdown-item es5-link">ES5 & ES6</button>
+              <button class="dropdown-item Afunctions-link">
+                Advanced Functions
+              </button>
+              <button class="dropdown-item Aarrays-link">
+                Advanced Arrays
+              </button>
+              <button class="dropdown-item Aobjects-link">
+                Advanced Objects
+              </button>
+              <button class="dropdown-item PrefPval-link">
+                Pass by Reference VS Pass by Value
+              </button>
+              <button class="dropdown-item TypeC-link">Type Coercion</button>
+              <button class="dropdown-item es7-link">ES7 & ES8</button>
+            </div>
+          </li>
+          <li class="nav-item">
+            <button onclick="bottomFunction()" id="myBtn" title="Go to bottom">
+              To Bottom
+            </button>
+          </li>
+          <li class="nav-item">
+            <button onclick="topFunction()" id="myBtnTop" title="Go to top">
+              To Top
+            </button>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+    </nav>
+    <h1 class="html-topic">HTML</h1>
     <table>
       <tr>
-        <th>Name</th>
-        <th>HTML Tag</th>
-        <th class="example">Example</th>
-        <th>Description</th>
+        <th class="thName">Name</th>
+        <th class="thTag">Tag</th>
+        <th class="thExample">Example</th>
+        <th class="thDesc">Description</th>
       </tr>
       <tr>
         <td>Paragraph Tag</td>
-        <td>&lt; p &gt;</td>
         <td>
-          &lt;p&gt;My first paragraph&lt;/p&gt; <br />
-          <br />
-          <p>My first paragraph</p>
+          <code>< p ></code>
+        </td>
+        <td>
+          <code>
+            &lt;p&gt;My first paragraph&lt;/p&gt; <br />
+            <br />
+            <p>My first paragraph</p>
+          </code>
         </td>
         <td>
           Defines a paragraph. Browsers automatically add a single blank line
@@ -40,11 +128,17 @@
       </tr>
       <tr>
         <td>Anchor Tag</td>
-        <td>&lt; a &gt;</td>
         <td>
-          Link to &lt;a href="google.com"&gt;Google&lt;/a&gt; <br />
-          <br />
-          Link to <a href="google.com">Google</a>
+          <code>
+            &lt; a &gt;
+          </code>
+        </td>
+        <td>
+          <code>
+            Link to &lt;a href="google.com"&gt;Google&lt;/a&gt; <br />
+            <br />
+            Link to <a href="google.com">Google</a>
+          </code>
         </td>
         <td>
           Defines a hyperlink, the href attribute specifies the URL of the page
@@ -53,17 +147,23 @@
       </tr>
       <tr>
         <td>Heading Tag</td>
-        <td>&lt; h1 &gt;</td>
         <td>
-          &lt;h1&gt;Heading 1&lt;/h1&gt; <br />
-          <h1>Heading 1</h1>
-          <br />
-          &lt;h2&gt;Heading 2&lt;/h2&gt; <br />
-          <h2>Heading 2</h2>
-          <br />
-          &lt;h3&gt;Heading 3&lt;/h3&gt; <br />
-          <h3>Heading 3</h3>
-          <br />
+          <code>
+            &lt; h1 &gt;
+          </code>
+        </td>
+        <td>
+          <code>
+            &lt;h1&gt;Heading 1&lt;/h1&gt; <br />
+            <h1>Heading 1</h1>
+            <br />
+            &lt;h2&gt;Heading 2&lt;/h2&gt; <br />
+            <h2>Heading 2</h2>
+            <br />
+            &lt;h3&gt;Heading 3&lt;/h3&gt; <br />
+            <h3>Heading 3</h3>
+            <br />
+          </code>
         </td>
         <td>
           Titles or subtitles that you want to display on a webpage. h1 to h6
@@ -71,18 +171,22 @@
       </tr>
       <tr>
         <td>Image Tag</td>
-        <td>&lt; img &gt;</td>
         <td>
-          &lt;img
-          src="https://geniusvets.s3.amazonaws.com/gv-cat-breeds/Exotic-Shorthair-1.jpg"
-          alt="Exotic Shorthair" width="100" height="100"&gt; <br />
-          <br />
-          <img
+          <code> &lt; img &gt;</code>
+        </td>
+        <td>
+          <code>
+            &lt;img
             src="https://geniusvets.s3.amazonaws.com/gv-cat-breeds/Exotic-Shorthair-1.jpg"
-            alt="Exotic Shorthair"
-            width="100"
-            height="100"
-          />
+            alt="Exotic Shorthair" width="100" height="100"&gt; <br />
+            <br />
+            <img
+              src="https://geniusvets.s3.amazonaws.com/gv-cat-breeds/Exotic-Shorthair-1.jpg"
+              alt="Exotic Shorthair"
+              width="100"
+              height="100"
+            />
+          </code>
         </td>
         <td>
           Used to embed an image in an HTML page. Images are not technically
@@ -93,16 +197,18 @@
       </tr>
       <tr>
         <td>Form and Input Tag</td>
-        <td>&lt; Form &gt;</td>
         <td>
-          &lt; form action="/action_page.php" method="get"&gt; <br />
-          &lt;label for="fname">First name:&lt;/label&gt;&lt;br /&gt; <br />
-          &lt;input type="text" id="lname" name="lname" /&gt; &lt;br /&gt;
-          <br />
-          &lt;input type="submit" value="Submit" /&gt; <br />
-          &lt;/form&gt; <br />
-          <br />
+          <code> &lt; Form &gt;</code>
+        </td>
+        <td>
           <code>
+            &lt; form action="/action_page.php" method="get"&gt; <br />
+            &lt;label for="fname">First name:&lt;/label&gt;&lt;br /&gt; <br />
+            &lt;input type="text" id="lname" name="lname" /&gt; &lt;br /&gt;
+            <br />
+            &lt;input type="submit" value="Submit" /&gt; <br />
+            &lt;/form&gt; <br />
+            <br />
             <form action="/action_page.php" method="get">
               <label for="fname">First name:</label><br />
               <input type="text" id="lname" name="lname" /><br />
@@ -130,9 +236,11 @@
       </tr>
       <tr>
         <td>Input Tag</td>
-        <td>&lt; input &gt;</td>
         <td>
-          &lt;input &gt; <br />
+          <code> &lt; input &gt;</code>
+        </td>
+        <td>
+          <input type="text" name="email" id="" placeholder="email" /> <br />
           <br />
         </td>
         <td>
@@ -140,18 +248,18 @@
         </td>
       </tr>
     </table>
-    <h1>ES5 and ES6</h1>
-    <h1>EcmaScript5 & 6</h1>
+    <h1 class="es5-topic">ES5 and ES6</h1>
+    <h2>EcmaScript5 & 6</h2>
     <table>
       <tr>
-        <th>Name</th>
-        <th>HTML Tag</th>
-        <th class="example">Example</th>
-        <th>Description</th>
+        <th class="thName">Name</th>
+        <th class="thTag">Tag</th>
+        <th class="thExample">Example</th>
+        <th class="thDesc">Description</th>
       </tr>
       <tr>
         <td>Ternery operator</td>
-        <td>condition ? exprIfTrue : exprIfFalse;</td>
+        <td><code> condition ? exprIfTrue : exprIfFalse;</code></td>
         <td>
           <code>
             var age = 26; <br />
@@ -164,6 +272,9 @@
       </tr>
       <tr>
         <td>Switch Statement</td>
+        <td>
+          <code> </code>
+        </td>
         <td>
           <code>
             switch (expression) { <br />
@@ -178,10 +289,8 @@
             //Statements executed when none of the values match the value of the
             expression// <br />
             [break;]] }<br />
-          </code>
-        </td>
-        <td>
-          <code>
+            <br />
+            //EXAMPLE//<br />
             var age = 26; <br />
             var beverage = (age >= 21) ? "Beer" : "Juice"; <br />
             console.log(beverage); <br />
@@ -341,13 +450,13 @@
         </td>
       </tr>
     </table>
+    <h1 class="Afunctions-topic">Advanced Functions</h1>
     <table>
-      <h1>Advanced Functions</h1>
       <tr>
-        <th>Name</th>
-        <th>HTML Tag</th>
-        <th class="example">Example</th>
-        <th>Description</th>
+        <th class="thName">Name</th>
+        <th class="thTag">Tag</th>
+        <th class="thExample">Example</th>
+        <th class="thDesc">Description</th>
       </tr>
       <tr>
         <td>Arrow functions</td>
@@ -471,13 +580,13 @@
         </td>
       </tr>
     </table>
-    <h1>Advanced Arrays</h1>
+    <h1 class="Aarrays-topic">Advanced Arrays</h1>
     <table>
       <tr>
-        <th>Name</th>
-        <th>HTML Tag</th>
-        <th class="example">Example</th>
-        <th>Description</th>
+        <th class="thName">Name</th>
+        <th class="thTag">Tag</th>
+        <th class="thExample">Example</th>
+        <th class="thDesc">Description</th>
       </tr>
       <tr>
         <td>Map</td>
@@ -530,13 +639,13 @@
         </td>
       </tr>
     </table>
-    <h1>Advanced Objects</h1>
+    <h1 class="Aobjects-topic">Advanced Objects</h1>
     <table>
       <tr>
-        <th>Name</th>
-        <th>HTML Tag</th>
-        <th class="example">Example</th>
-        <th>Description</th>
+        <th class="thName">Name</th>
+        <th class="thTag">Tag</th>
+        <th class="thExample">Example</th>
+        <th class="thDesc">Description</th>
       </tr>
       <tr>
         <td>Reference Type</td>
@@ -576,7 +685,7 @@
         </td>
       </tr>
       <tr>
-        <td>Instantiation(constructor)</td>
+        <td>Instantiation (constructor)</td>
         <td></td>
         <td>
           <code>
@@ -618,13 +727,13 @@
         </td>
       </tr>
     </table>
-    <h1>Pass by REFERENCE VS Pass by VALUE</h1>
+    <h1 class="PrefPval-topic">Pass by REFERENCE VS Pass by VALUE</h1>
     <table>
       <tr>
-        <th>Name</th>
-        <th>HTML Tag</th>
-        <th class="example">Example</th>
-        <th>Description</th>
+        <th class="thName">Name</th>
+        <th class="thTag">Tag</th>
+        <th class="thExample">Example</th>
+        <th class="thDesc">Description</th>
       </tr>
       <tr>
         <td>Pass by VALUE</td>
@@ -646,35 +755,329 @@
         </td>
       </tr>
       <tr>
-        <td>Pass by REFERENCE(object & array)</td>
+        <td>
+          Pass by REFERENCE <br />
+          (array)
+        </td>
         <td></td>
         <td>
           <code>
             //EXAMPLE1 - Array//<br />
-            var c = [1,2,3,4,5]; var d = c;<br />
+            var c = [1,2,3,4,5]; <br />
+            var d = c;<br />
             d.push(6789);<br />
             console.log(c)<br />
             console.log(d)<br />
+            //[1, 2, 3, 4, 5, 6789];<br />
+            //[1, 2, 3, 4, 5, 6789];<br />
             <br />
-            //EXAMPLE2 - Object//<br />
-            let obj1 = {name: "Yao", password: "123"};<br />
-            let obj2 = obj1;<br />
-            obj2.password = "abc"<br />
-            console.log(obj1)<br />
-            console.log(obj2)<br />
-            //obj1 {name: "Yao", password: "abc"}<br />
-            //obj2 {name: "Yao", password: "abc"}<br />
+            //EXAMPLE2 - To clone an array...<br />
+            var c = [1,2,3,4,5]; <br />
+            var d = [].concat(c);<br />
+            c.push(6789);<br />
+            console.log(c);<br />
+            console.log(d);<br />
+            //[1, 2, 3, 4, 5, 6789];<br />
+            //[1, 2, 3, 4, 5];<br />
           </code>
         </td>
         <td>
           Example 1 - The number was pushed to the array, which is assigned to
           variable c and d.<br />
           <br />
-          Example 2 - Both passwords were updated because of pass by REFERENCE.
-          Object was not copied, it was simply assigned to two variables.
+          Example 2 - The cloned array is unaffected by the d.push. This is
+          because the clone is now a new piece of memory and not referring to c
+          anymore<br />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Pass by REFERENCE <br />
+          (object)
+        </td>
+        <td></td>
+        <td>
+          <code>
+            //EXAMPLE3 - Object//<br />
+            let obj1 = {name: "Yao", password: "123"};<br />
+            let obj2 = obj1;<br />
+            <br />
+            obj2.password = "abc"<br />
+            <br />
+            console.log(obj1)<br />
+            console.log(obj2)<br />
+            <br />
+            //obj1 {name: "Yao", password: "abc"}<br />
+            //obj2 {name: "Yao", password: "abc"}<br />
+            <br />
+            //EXAMPLE4 - To clone an object...<br />
+            let obj = {a: "a", b: "b", c: "c"} <br />
+            <br />
+            let objClone1 = Object.assign({}, obj); <br />
+            let objClone2 = {...obj} <br />
+            <br />
+            obj.c = 5; <br />
+            <br />
+            console.log(obj); <br />
+            console.log(objClone1); <br />
+            console.log(objClone2); <br />
+            <br />
+            //{a: "a", b: "b", c: 5} <br />
+            //{a: "a", b: "b", c: "c"} <br />
+            //{a: "a", b: "b", c: "c"} <br />
+          </code>
+        </td>
+        <td>
+          Example 3 - Both passwords were updated because of pass by REFERENCE.
+          Object was not copied, it was simply assigned to two variables.<br />
+          Example 4 - The objectClone1 and 2 was not affected by the obj.c=5,
+          while the obj was.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Pass by REFERENCE <br />
+          (shallow object cloning)
+        </td>
+        <td></td>
+        <td>
+          <code>
+            //EXAMPLE5 - To clone an object...<br />
+            let obj = {a: "a", b: "b", c: {text: "Hello"}} <br />
+            <br />
+            let objClone1 = Object.assign({}, obj); <br />
+            let objClone2 = {...obj} <br />
+            <br />
+            obj.c.text = "Goodbye"; <br />
+            <br />
+            console.log(obj); <br />
+            console.log(objClone1); <br />
+            console.log(objClone2); <br />
+            <br />
+            //{a: "a", b: "b", c: {text: "Goodbye"}} <br />
+            //{a: "a", b: "b", c: {text: "Goodbye"}} <br />
+            //{a: "a", b: "b", c: {text: "Goodbye"}} <br />
+          </code>
+        </td>
+        <td>
+          Example 5 - This example of shallow cloning where we can only clone
+          the first layer. This can cause problems because the second layer
+          across all variables can be affected by changes even though it is
+          cloned.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Pass by REFERENCE <br />
+          (deep object cloning)
+        </td>
+        <td></td>
+        <td>
+          <code>
+            //EXAMPLE6 - To clone an object...<br />
+            let obj = {a: "a", b: "b", c: {text: "Hello"}} <br />
+            <br />
+            let objClone1 = Object.assign({}, obj); <br />
+            let objClone2 = {...obj} <br />
+            let deepClone = JSON.parse(JSON.stringify(obj))
+            <br />
+            obj.c.text = "Goodbye"; <br />
+            <br />
+            console.log(obj); <br />
+            console.log(objClone1); <br />
+            console.log(objClone2); <br />
+            console.log(deepClone); <br />
+            <br />
+            //{a: "a", b: "b", c: {text: "Goodbye"}} <br />
+            //{a: "a", b: "b", c: {text: "Goodbye"}} <br />
+            //{a: "a", b: "b", c: {text: "Goodbye"}} <br />
+            //{a: "a", b: "b", c: {text: "Hello"}} <br />
+          </code>
+        </td>
+        <td>
+          JSON.stringify makes the object into a string, then is parsed back
+          into an object. This makes it unaffected by the shallow cloning.
         </td>
       </tr>
     </table>
+    <h1 class="TypeC-topic">Type Coercion</h1>
+    <table>
+      <tr>
+        <th class="thName">Name</th>
+        <th class="thTag">Tag</th>
+        <th class="thExample">Example</th>
+        <th class="thDesc">Description</th>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td>
+          <code>
+            1 == "1" //True<br />
+            1 === "1" //False<br />
+          </code>
+        </td>
+        <td>
+          Type Coercion is when javascript forces the types to interchange when
+          not explicetly told to do so. In the end, just use ===
+        </td>
+      </tr>
+    </table>
+    <h1 class="es7-topic">ES7 & ES8</h1>
+    <table>
+      <tr>
+        <th class="thName">Name</th>
+        <th class="thTag">Tag</th>
+        <th class="thExample">Example</th>
+        <th class="thDesc">Description</th>
+      </tr>
+      <tr>
+        <td>includes ES7</td>
+        <td></td>
+        <td>
+          <code>
+            "Hello".includes("o"); //True<br />
+            <br />
+            const pets = ["cat", "dog", "bat"];<br />
+            pets.includes("dog"); //True<br />
+            pets.includes("bird"); //False<br />
+          </code>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>exponential operator ES7</td>
+        <td></td>
+        <td>
+          <code>
+            const square = (x) => x**2;<br />
+            square(2); //4 <br />
+            square(5); //25 <br />
+            <br />
+            const cube = (x) => x**3;<br />
+            cube(3); //27 <br />
+            cube(4); //64 <br />
+          </code>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>String Padding ES8</td>
+        <td></td>
+        <td>
+          <code>
+            "Turtle".padStart(10);<br />
+            "Turtle".padEnd(10);<br />
+            //" Turtle" //"Turtle "
+          </code>
+        </td>
+        <td>Adds spaces padding INCLUDING THE STRING to the start or end</td>
+      </tr>
+      <tr>
+        <td>Trailing commas in functions paramater lists and calls ES8</td>
+        <td></td>
+        <td>
+          <code>
+            const fun = (a,b,c,d) => {<br />
+            console.log(a);}<br />
+            fun(1,2,3,4,)<br />
+            //1<br />
+          </code>
+        </td>
+        <td>The ENDING COMMA is now valid</td>
+      </tr>
+      <tr>
+        <td>Object.values & Object.entries</td>
+        <td></td>
+        <td>
+          <code>
+            let obj = {<br />
+            username0: "John",<br />
+            username1: "Jack",<br />
+            username2: "Richard"<br />
+            }<br />
+            <br />
+            //OLD WAY<br />
+            Object.keys(obj).forEach((key, index) => {<br />
+            console.log(key, obj[key])})<br />
+            <br />
+            //username0 John<br />
+            //username1 Jack<br />
+            //username2 Richard<br />
+            <br />
+            //NEW WAY <br />
+            Object.values(obj).forEach(value => {<br />
+            console.log(value)})<br />
+            <br />
+            //John<br />
+            //Jack<br />
+            //Richard<br />
+            <br />
+            Object.entries(obj).forEach(value => {<br />
+            console.log(value)})<br />
+            <br />
+            //["username0", "John"]<br />
+            //["username1", "Jack"]<br />
+            //["username2", "Richard"]<br />
+            <br />
+            //EXAMPLE<br />
+            Object.entries(obj).map(value => {<br />
+            return value[1] + value[0].replace("username", "");<br />
+            });<br />
+            //["John0", "Jack1", "Richard2"]<br />
+          </code>
+        </td>
+        <td></td>
+      </tr>
+    </table>
+    <h1 class="Aloops-topic">Advanced Loops</h1>
+    <table>
+      <tr>
+        <th class="thName">Name</th>
+        <th class="thTag">Tag</th>
+        <th class="thExample">Example</th>
+        <th class="thDesc">Description</th>
+      </tr>
+      <tr>
+        <td>for of & for in loops</td>
+        <td>
+          <code>for ((var) of (array)){};</code>
+        </td>
+        <td>
+          <code>
+            const basket = ["apple", "orange", "grape"];<br />
+            <br />
+            //for loop<br />
+            baseket.forEach(item => { console.log(item) });<br />
+            <br />
+            //forEach<br />
+            baseket.forEach(item => { console.log(item) });<br />
+            <br />
+            //for of<br />
+            //Iterating over arrays<br />
+            for (item of basket){ console.log(item); };<br />
+            <br />
+            //Iterating over strings<br />
+            for (item of "string"){ console.log(item); };<br />
+            <br />
+            <br />
+            <br />
+            <br />
+          </code>
+        </td>
+        <td></td>
+      </tr>
+    </table>
     <script type="text/javascript" src="index.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
