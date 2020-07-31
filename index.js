@@ -66,6 +66,38 @@ $(".es7-link").click(function () {
     "slow"
   );
 });
+$(".Aloops-link").click(function () {
+  $("html,body").animate(
+    {
+      scrollTop: $(".Aloops-topic").offset().top - 25,
+    },
+    "slow"
+  );
+});
+$(".Debug-link").click(function () {
+  $("html,body").animate(
+    {
+      scrollTop: $(".Debug-topic").offset().top - 25,
+    },
+    "slow"
+  );
+});
+$(".JavaEngine-link").click(function () {
+  $("html,body").animate(
+    {
+      scrollTop: $(".JavaEngine-topic").offset().top - 25,
+    },
+    "slow"
+  );
+});
+$(".Terminal-link").click(function () {
+  $("html,body").animate(
+    {
+      scrollTop: $(".Terminal-topic").offset().top - 25,
+    },
+    "slow"
+  );
+});
 
 // When the user clicks on the button, scroll to the top of the document
 function bottomFunction() {

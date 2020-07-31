@@ -75,6 +75,14 @@
               </button>
               <button class="dropdown-item TypeC-link">Type Coercion</button>
               <button class="dropdown-item es7-link">ES7 & ES8</button>
+              <button class="dropdown-item Aloops-link">Advanced Loops</button>
+              <button class="dropdown-item Debug-link">Debugging</button>
+              <button class="dropdown-item JavaEngine-link">
+                Javascript Engine
+              </button>
+              <button class="dropdown-item Terminal-link">
+                Terminal Commands
+              </button>
             </div>
           </li>
           <li class="nav-item">
@@ -1039,16 +1047,17 @@
         <th class="thDesc">Description</th>
       </tr>
       <tr>
-        <td>for of & for in loops</td>
+        <td>for of loops</td>
         <td>
-          <code>for ((var) of (array)){};</code>
+          <code>for (() of ()){};</code>
         </td>
         <td>
           <code>
             const basket = ["apple", "orange", "grape"];<br />
             <br />
             //for loop<br />
-            baseket.forEach(item => { console.log(item) });<br />
+            for (let i = 0; i < basket.length; i++) {<br />
+            console.log(basket[i]);}<br />
             <br />
             //forEach<br />
             baseket.forEach(item => { console.log(item) });<br />
@@ -1056,16 +1065,333 @@
             //for of<br />
             //Iterating over arrays<br />
             for (item of basket){ console.log(item); };<br />
+            //apples<br />
+            //oranges<br />
+            //grapes<br />
             <br />
             //Iterating over strings<br />
             for (item of "string"){ console.log(item); };<br />
-            <br />
-            <br />
-            <br />
+            //b<br />
+            //a<br />
+            //s<br />
+            //k<br />
+            //e<br />
+            //t<br />
             <br />
           </code>
         </td>
+        <td>
+          For of loops allows you to iterate over iterables. This includes ONLY
+          arrays and strings.
+        </td>
+      </tr>
+      <tr>
+        <td>for in loops</td>
+        <td>
+          <code>for (() in ()){};</code>
+        </td>
+        <td>
+          <code>
+            // for in<br />
+            const detailedBasket = {<br />
+            apples: 5,<br />
+            oranges: 10,<br />
+            grapes: 100}<br />
+            <br />
+            for (item in detailedBasket){ console.log(item)}<br />
+            <br />
+            //apples<br />
+            //oranges<br />
+            //grapes<br />
+          </code>
+        </td>
+        <td>
+          Allows you to loop over and see the object properties. This is NOT
+          iterating. What this is doing is ENUMERATING. Objects in javascript
+          are ENUMERABLE if it allows us to see the properties.<br />
+          ENUMERATING is for OBJECTS.
+        </td>
+      </tr>
+    </table>
+    <h1 class="Debug-topic">Debugging</h1>
+    <table>
+      <tr>
+        <th class="thName">Name</th>
+        <th class="thTag">Tag</th>
+        <th class="thExample">Example</th>
+        <th class="thDesc">Description</th>
+      </tr>
+      <tr>
+        <td>Debugging Example</td>
         <td></td>
+        <td>
+          <code>
+            //Example code <br />
+            <br />
+            const flattened = [[0, 1],[2, 3],[4, 5], <br />
+            ].reduce((a, b) => a.concat(b), []); <br />
+            <br />
+            //Result //[0,1,2,3,4,5] <br />
+            <br />
+            //First - label what is happening <br />
+            <br />
+            const flattened = [ [0, 1],[2, 3],[4, 5], <br />
+            ].reduce((accumulator, array) => accumulator.concat(array), []);<br />
+            <br />
+            //Second - add console logs to see what the accumulator and array is
+            doing through the loop <br />
+            <br />
+            const flattened = [[0, 1], [2, 3],[4, 5],
+            <br />
+            ].reduce((accumulator, array) => { <br />
+            console.log("array", array); <br />
+            console.log("accumulator", accumulator); <br />
+            return accumulator.concat(array); <br />
+            }, []); <br />
+            <br />
+            //Third - use debugger to see step by step what the function is
+            doing <br />
+            <br />
+            const flattened = [ [0, 1],[2, 3],[4, 5], <br />
+            ].reduce((accumulator, array) => { <br />
+            debugger; <br />
+            return accumulator.concat(array); <br />
+            }, []); <br />
+          </code>
+        </td>
+        <td>
+          When encountering a piece of code that is unknown to you, first
+          re-label what pieces of the code is doing. Then use console log to
+          produce results within the function. And finally use debugger to step
+          through the function.
+        </td>
+      </tr>
+    </table>
+    <h1 class="JavaEngine-topic">Javascript Engine</h1>
+    <table>
+      <tr>
+        <th class="thName">Name</th>
+        <th class="thTag">Tag</th>
+        <th class="thExample">Example</th>
+        <th class="thDesc">Description</th>
+      </tr>
+      <tr>
+        <td>Javascript Engine</td>
+        <td></td>
+        <td>
+          <img
+            src="https://techy360.com/wp-content/uploads/2020/03/img-02-3.png"
+            alt=""
+            style="width: 350px;"
+          />
+        </td>
+        <td>
+          Javascript is a single-threaded language that can be non-blocking.<br />
+          Single-threaded means it has ONE call stack, which can only do one
+          thing at a time. Call stack is FIRST IN LAST OUT.<br />
+        </td>
+      </tr>
+
+      <tr>
+        <td>Call Stack</td>
+        <td></td>
+        <td>
+          <code>
+            //Example 1<br />
+            console.log("1");<br />
+            console.log("2");<br />
+            console.log("3");<br />
+            <br />
+            //1 placed in call stack, runs and executes 1;<br />
+            //2 placed in call stack, runs and executes 2;<br />
+            //3 placed in call stack, runs and executes 3;<br />
+            <br />
+            //Example 2<br />
+            const one = () => {<br />
+            const two = () => {<br />
+            console.log("3");<br />
+            }<br />
+            two();<br />
+            }<br />
+            <br />
+            //one();<br />
+            //4<br />
+            <br />
+            //What happens in the call stack...<br />
+            <br />
+            //first the functions/methods are placed in order to how they are
+            called <br />
+            <br />
+            //no more functions/methods, callstack will now run<br />
+            //console.log("3") <--- called last run first<br />
+            //two() <--- called second run second<br />
+            //one() <--- called first run last<br />
+          </code>
+        </td>
+        <td>
+          The callstack works by placing the functions/methods to be run, in
+          order they are called. The call runs to the deepest level and calls
+          that first, then all the way back to the first call.
+        </td>
+      </tr>
+      <tr>
+        <td>Synchronous vs Asynchronous programming</td>
+        <td></td>
+        <td>
+          <code>
+            //Synchonous programming - Example 1 from before<br />
+            console.log("1");<br />
+            console.log("2");<br />
+            console.log("3");<br />
+            <br />
+            //1 placed in call stack, runs and executes 1;<br />
+            //2 placed in call stack, runs and executes 2;<br />
+            //3 placed in call stack, runs and executes 3;<br />
+            <br />
+            //Asynchonous programming example<br />
+            console.log("1");<br />
+            setTimeout(()=>{<br />
+            console.log("2");}, 2000);<br />
+            console.log("3");<br />
+            <br />
+            //1<br />
+            //3<br />
+            //(after 2 seconds) 2<br />
+          </code>
+        </td>
+        <td>
+          //Synchronous<br />
+          Synchronous programming means when code is run in order only after the
+          the previous code is run.<br />
+          Synchronous programming is predictable, we know what happens and in
+          what order. But it can be slow, if one function takes up alot of time,
+          it can slow or interrupt the process as things need to be executed in
+          order.<br />
+          <br />
+          //Asynchronous<br />
+          Think of Asynchronous as a behavior.
+        </td>
+      </tr>
+      <tr>
+        <td>Javascript Run-Time Environment (Asynchronous)</td>
+        <td></td>
+        <td>
+          <code>
+            <br />
+            //BREAKDOWN of Run-Time Environment - Asynchronous example above<br />
+            <br />
+            7TH - console.log("2") <-- 7th - callback retrieves the console log
+            in the settimeout, places in queue and executes <br />
+            6TH - callback() <--6th - callback placed in call-stack when all
+            else is run <br />
+            3RD - console.log("3"); <--3rd - Run and execute<br />
+            1ST - console.log("1"); <--1st - Run and execute<br />
+            ///CALL-STACK///<br />
+            <br />
+            2ND - setTimeout((), 2000); <--2nd - WEB API function placed on 2sec
+            timeout<br />
+            ///WEB API///<br />
+            <br />
+            4TH - callback(); <--4th - After 2sec, setTimeout() triggers a
+            callback in the callback queue <br />
+            ///CALLBACK QUEUE///<br />
+            <br />
+            5TH - Event loop continuously checks if CALL STACK is empty, and if
+            so, checks for Callbacks. <br />
+            ///EVENT LOOP///<br />
+            <br />
+            ///RESULT///<br />
+            1<br />
+            3<br />
+            2(after 2 sec)<br />
+          </code>
+        </td>
+        <td>
+          <img
+            src="https://miro.medium.com/max/1024/1*4lHHyfEhVB0LnQ3HlhSs8g.png"
+            alt=""
+            style="width: 250px;"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>Memory Heap & Memory Leak</td>
+        <td></td>
+        <td>
+          <code>
+            const a = 1<br />
+            const b = 5<br />
+            const c = 9<br />
+            //Variables that take up space in the memory heap<br />
+          </code>
+        </td>
+        <td>
+          When variables are created, they reside in the memory heap. However
+          the memory heap can only take so much, especially if there are complex
+          variables(arrays, objects). Unused variables may fill up the memory
+          heap, and the browser may not be able to work. It is important to not
+          use as many GLOBAL VARIABLES, and to KEEP THE CODE CLEAN.
+        </td>
+      </tr>
+      <tr>
+        <td>Recursion</td>
+        <td></td>
+        <td>
+          <code>
+            function foo(){<br />
+            foo(); }<br />
+          </code>
+        </td>
+        <td>When a function recalls itself. This causes a stack overflow.</td>
+      </tr>
+    </table>
+    <h1 class="Terminal-topic">Terminal Commands</h1>
+    <table>
+      <tr>
+        <th class="thName">Name</th>
+        <th class="thTag">Tag</th>
+        <th class="thExample">Example</th>
+        <th class="thDesc">Description</th>
+      </tr>
+      <tr>
+        <td>Essential Terminal Commands (Windows)</td>
+        <td></td>
+        <td>
+          <div style="text-align: right;">
+            <code>
+              dir <br />
+              cd {directory name}<br />
+              cd /<br />
+              cd ..<br />
+              ls <br />
+              mkdir {filename}<br />
+              echo > {filename}<br />
+              del {filename}<br />
+              rmdir {directory name}<br />
+              rename {filename} {new filename}<br />
+              start {filename}<br />
+              start .<br />
+              cls<br />
+            </code>
+          </div>
+        </td>
+        <td>
+          <code>
+            list files<br />
+            change directory<br />
+            go to root (top) directory<br />
+            go up a level<br />
+            lists the folder content<br />
+            make a directory<br />
+            create an empty file<br />
+            remove a file<br />
+            remove directory and files within<br />
+            rename a file or folder<br />
+            open file in default program<br />
+            open current directory<br />
+            clear the terminal screen<br />
+          </code>
+        </td>
       </tr>
     </table>
     <script type="text/javascript" src="index.js"></script>
