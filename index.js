@@ -98,6 +98,14 @@ $(".Terminal-link").click(function () {
     "slow"
   );
 });
+$(".Git-link").click(function () {
+  $("html,body").animate(
+    {
+      scrollTop: $(".Git-topic").offset().top - 25,
+    },
+    "slow"
+  );
+});
 
 // When the user clicks on the button, scroll to the top of the document
 function bottomFunction() {

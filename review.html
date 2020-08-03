@@ -83,6 +83,9 @@
               <button class="dropdown-item Terminal-link">
                 Terminal Commands
               </button>
+              <button class="dropdown-item Git-link">
+                Git & Github
+              </button>
             </div>
           </li>
           <li class="nav-item">
@@ -1394,7 +1397,7 @@
         </td>
       </tr>
     </table>
-    <h1 class="Terminal-topic">GIT & GITHUB</h1>
+    <h1 class="Git-topic">GIT & GITHUB</h1>
     <table>
       <tr>
         <th class="thName">Name</th>
@@ -1419,6 +1422,30 @@
               <li><code>git commit -m "message note"</code> to commit the changes to github with a message</li>
               <li><code>git push</code> to upload/sync changes to github</li>
               <li><code>git pull</code> to update local files from the version on github</li>
+            </ol>
+            additional notes...
+            <ul>
+              <li><code>git add -A</code>
+                 stages all changes
+              </li>
+              <li><code>git add .</code> stages new files and modifications, without deletions</li>
+              <li><code>git add -u</code>
+                 stages modifications and deletions, without new files</li>
+            </ul>
+          </code>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Branch from github</td>
+        <td></td>
+        <td>
+            //Create a new branch from the master...
+            <ol>
+              <li><code>git branch</code> to check what branch you are currently on</li>
+              <li><code>git branch newfeature</code> to create a new branch called newfeature</li>
+              <li><code>git branch</code> to check the created branch</li>
+              <li><code>git checkout newfeature</code> to switch to the branch "newfeature"</li>
             </ol>
           </code>
         </td>
